@@ -15,7 +15,12 @@ Everything except the conductor runs locally.
 
 > 一句话：那些聊天室 UI 给你“同一个窗口”，这个项目解决“同一场对话”。
 
-![Relay Room live view](docs/screenshot.png)
+[English README](README.en.md)
+
+![Relay Room demo](docs/demo.gif)
+
+> 上图为真实验收跑（200 轮，`accept200b`）里截取的 29 秒：本地模型逐条接力，云端导播每 8 轮
+> 注入新角度。重新生成：`python tools/make-demo-gif.py --run runs/<id> --auto --out docs/demo.gif`
 
 ---
 
@@ -231,6 +236,7 @@ Issues 和 PR 都欢迎；如果你想先从小处入手，可以从 `docs/IDEAS
 - [docs/PITFALLS.md](docs/PITFALLS.md) — 20 real pitfalls and how to avoid them
 - [docs/RESULTS.md](docs/RESULTS.md) — experiments, tables, methodology caveats
 - [docs/CONFIG.md](docs/CONFIG.md) — every config field
+- [docs/PROMO.md](docs/PROMO.md) — 发布文案与渠道（中英文可直接复制）
 - [SECURITY.md](SECURITY.md) — keys, privacy, what leaves the machine
 
 ## License
