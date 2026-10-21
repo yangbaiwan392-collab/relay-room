@@ -15,6 +15,8 @@ Everything except the conductor runs locally.
 
 > 一句话：那些聊天室 UI 给你“同一个窗口”，这个项目解决“同一场对话”。
 
+![Relay Room live view](docs/screenshot.png)
+
 ---
 
 ## Why
