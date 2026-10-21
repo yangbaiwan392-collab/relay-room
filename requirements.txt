@@ -1,0 +1,5 @@
+# No third-party dependencies.
+# This project uses only the Python 3.10+ standard library.
+# The only external runtime requirements are:
+#   - Ollama (https://ollama.com) for local speakers
+#   - an OpenAI-compatible endpoint + API key for the optional cloud conductor

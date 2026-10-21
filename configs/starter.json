@@ -1,0 +1,251 @@
+{
+  "run": {
+    "name": "starter",
+    "topic": "一桌人帮一个普通上班族决定今晚吃什么：预算 50 块，楼下有菜市场，家里有电饭锅，一个人吃。别讲大道理，聊具体的：买什么、做多久、值不值。",
+    "mode": "relay",
+    "rounds": 40,
+    "max_tokens": 200,
+    "num_ctx": 4096,
+    "history": 8,
+    "token_budget": 200000,
+    "wall_timeout": 10800,
+    "round_timeout": 240,
+    "turn_timeout": 150,
+    "convergence": {
+      "enabled": false
+    },
+    "memory": {
+      "enabled": false,
+      "digest": true
+    },
+    "board": {
+      "enabled": false
+    },
+    "mentions": {
+      "enabled": false
+    },
+    "language": "zh",
+    "style": "human",
+    "own_tail": 2,
+    "repeat_penalty": 1.15,
+    "frequency_penalty": 0.6,
+    "dedup": {
+      "enabled": true,
+      "threshold": 0.94,
+      "max_per_round": 1,
+      "own_window": 6,
+      "skeleton_threshold": 0.92,
+      "per_speaker": {
+        "小陈": 0.9,
+        "阿May": 0.92,
+        "老王": 0.94,
+        "大刘": 0.94
+      }
+    },
+    "sample_vram": true,
+    "think": false,
+    "opener_pools": {
+      "老王": [
+        "我跟你说啊",
+        "这事儿我干过",
+        "我举个例子吧",
+        "实话实说",
+        "你听我讲",
+        "说句实在的",
+        "我吃过这亏",
+        "按我的经验"
+      ],
+      "阿May": [
+        "我算了一下",
+        "说个我遇到的",
+        "等下，先算账",
+        "从用户角度说",
+        "我上周刚碰到",
+        "这笔账不对",
+        "我举个例子",
+        "说个真事"
+      ],
+      "大刘": [
+        "等一下，这不靠谱吧",
+        "我打断一下",
+        "先说个不同意的",
+        "我泼个冷水",
+        "先别急着定",
+        "我算过这账",
+        "说句难听的",
+        "我不同意"
+      ],
+      "小陈": [
+        "我有个问题",
+        "是不是可以这样",
+        "我不太懂",
+        "弱弱问一句",
+        "那我问个傻问题",
+        "我有点懵",
+        "我插一句",
+        "真的假的"
+      ]
+    },
+    "reset_digest_on_switch": true,
+    "topic_plan": [],
+    "topic_guard": {
+      "enabled": false
+    },
+    "rounds_per_topic": 50,
+    "seed_topic": "",
+    "topic_deck": {},
+    "name_guard": {
+      "enabled": true,
+      "max_per_round": 2
+    },
+    "roles": [],
+    "opener_max_rounds": 12,
+    "angle_every": 4,
+    "angles": [],
+    "conductor": {
+      "enabled": true,
+      "every": 8,
+      "model": "deepseek-flash"
+    },
+    "domain_guard": {
+      "enabled": true,
+      "max_per_round": 2
+    },
+    "domains": [
+      {
+        "name": "哲学",
+        "rounds": 10,
+        "hint": "自由意志是否存在、身份同一性、意识难题、道德困境、时间与因果、语言与意义",
+        "avoid": [
+          "买菜",
+          "菜市场",
+          "土豆",
+          "豆腐",
+          "电饭锅",
+          "工地",
+          "装修",
+          "盖房子",
+          "水泥",
+          "瓷砖"
+        ]
+      },
+      {
+        "name": "玄学",
+        "rounds": 10,
+        "hint": "命理与统计、星座与巴纳姆效应、风水与心理暗示、巧合与因果错觉、直觉与概率、梦境与预兆",
+        "avoid": [
+          "豆腐",
+          "土豆",
+          "卤牛肉",
+          "电饭锅",
+          "工地",
+          "装修",
+          "瓷砖",
+          "菜市场"
+        ]
+      },
+      {
+        "name": "高科技",
+        "rounds": 10,
+        "hint": "AI 对齐、脑机接口、量子计算、可控核聚变、生物打印、太空互联网、人形机器人、6G",
+        "avoid": [
+          "豆腐",
+          "土豆",
+          "电饭锅",
+          "菜市场",
+          "工地",
+          "装修",
+          "瓷砖"
+        ]
+      },
+      {
+        "name": "成人",
+        "rounds": 10,
+        "hint": "成年人的亲密关系、欲望与自我认知、边界与同意、长期关系里的沟通、成人内容消费与伦理（不涉及未成年人、不涉及真实人物）",
+        "avoid": [
+          "工地",
+          "装修",
+          "瓷砖",
+          "水泥",
+          "盖房子"
+        ]
+      }
+    ],
+    "domain_rounds": 20,
+    "phrase_guard": {
+      "enabled": true,
+      "ngram_n": 6,
+      "ngram_repeat": 3,
+      "max_per_round": 1
+    },
+    "repair_timeout": 45,
+    "relay_check": "quote"
+  },
+  "speakers": [
+    {
+      "name": "老王",
+      "model": "qwen2.5:7b-instruct",
+      "temperature": 0.8,
+      "persona": "你是老王，四十来岁，干了十几年工程，说话像唠嗑，爱抬杠。开口先给一个具体例子或具体价钱，不爱讲道理。开场白由系统指定，不要自己另加。",
+      "locks": {
+        "banned_phrases": [
+          "比如说在成人",
+          "这事儿我干过",
+          "有些地方为了",
+          "砌墙",
+          "脚手架",
+          "工头",
+          "带过一帮",
+          "工地"
+        ],
+        "max_chars": 90,
+        "no_analogy": false
+      }
+    },
+    {
+      "name": "阿May",
+      "model": "qwen2.5:3b-instruct",
+      "temperature": 0.9,
+      "persona": "你是阿May，产品经理，习惯从用户的一件小事说起，讨厌大词。你说话直接，会算账，也会问'这对普通人到底有啥用'。开场白由系统指定，不要自己另加。",
+      "locks": {
+        "banned_phrases": [
+          "这对普通人到底有啥用",
+          "普通人到底有啥用",
+          "对普通人有啥用",
+          "这对普通人有啥用",
+          "我想到可以"
+        ],
+        "max_chars": 90,
+        "no_analogy": false
+      }
+    },
+    {
+      "name": "大刘",
+      "model": "qwen3:4b",
+      "temperature": 0.9,
+      "persona": "你是大刘，怀疑派。开场白由系统指定，不要自己另加。",
+      "locks": {
+        "banned_phrases": [
+          "就好比哲学",
+          "这就好比哲学"
+        ],
+        "max_chars": 90,
+        "no_analogy": false
+      }
+    },
+    {
+      "name": "小陈",
+      "model": "qwen2.5:1.5b-instruct",
+      "temperature": 0.9,
+      "persona": "你是小陈，刚毕业，爱问看起来有点傻的问题，但常常问到点子上。你说话短，喜欢举自己租房时的小例子。开场白由系统指定，不要自己另加。",
+      "locks": {
+        "banned_phrases": [
+          "就像高科技产",
+          "是不是可以这样"
+        ],
+        "max_chars": 90,
+        "no_analogy": false
+      }
+    }
+  ]
+}

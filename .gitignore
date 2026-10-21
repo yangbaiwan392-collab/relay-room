@@ -1,0 +1,22 @@
+# runtime data
+runs/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+
+# screenshots / recordings
+*.png
+*.jpg
+*.webp
+*.mp4
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# secrets / local
+.env
+modelfile*.txt
+*.log
