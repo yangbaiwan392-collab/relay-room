@@ -101,6 +101,7 @@ refuse charged topics; tooling is Windows-first.
 - [docs/DEPLOY.md](docs/DEPLOY.md) — step-by-step deploy, model setup, conductor config
 - [docs/PITFALLS.md](docs/PITFALLS.md) — 20 real pitfalls
 - [docs/RESULTS.md](docs/RESULTS.md) — experiments and methodology
+- [docs/RELATED.md](docs/RELATED.md) — comparison with Carlos Kelkboom, AutoGen, MoA
 - [docs/CONFIG.md](docs/CONFIG.md) — config reference
 - [docs/IDEAS.md](docs/IDEAS.md) — extension scenarios and a "good first issue" list
 - [SECURITY.md](SECURITY.md) — keys and what leaves the machine

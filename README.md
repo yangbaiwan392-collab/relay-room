@@ -235,6 +235,7 @@ Issues 和 PR 都欢迎；如果你想先从小处入手，可以从 `docs/IDEAS
 - [docs/DEPLOY.md](docs/DEPLOY.md) — step-by-step deployment, model creation, conductor setup
 - [docs/PITFALLS.md](docs/PITFALLS.md) — 20 real pitfalls and how to avoid them
 - [docs/RESULTS.md](docs/RESULTS.md) — experiments, tables, methodology caveats
+- [docs/RELATED.md](docs/RELATED.md) — 与 Carlos Kelkboom / AutoGen / MoA 等方案的对比
 - [docs/CONFIG.md](docs/CONFIG.md) — every config field
 - [docs/PROMO.md](docs/PROMO.md) — 发布文案与渠道（中英文可直接复制）
 - [SECURITY.md](SECURITY.md) — keys, privacy, what leaves the machine
