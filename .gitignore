@@ -20,3 +20,6 @@ venv/
 .env
 modelfile*.txt
 *.log
+
+# exception: repo screenshot
+!docs/screenshot.png
